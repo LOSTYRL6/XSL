@@ -1,0 +1,206 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #505250b4;
+    color: #333;
+}
+img{
+    width: 200px;
+    height: 200px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 25%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 84, 80);
+}
+.main_menu{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.main_menu a:hover {
+    animation: giro 4s infinite linear;
+    
+}
+.main_menu a:hover{
+    transform: scale(1.2);
+}
+@keyframes giro {
+    0% {
+      transform: rotate(20deg);
+      color: red;
+    }
+    25% {
+      transform: rotate(-20deg); 
+      color: green;
+    }
+    50% {
+      transform: rotate(20deg);
+      color: blue;
+    }
+    75% {
+        transform: rotate(-20deg);
+        color: gold;
+    }
+    100% {
+        transform: rotate(20deg) ;
+        color: red;
+    }
+}
+
+h1{
+    animation: Aumento 5s infinite;
+}
+@keyframes Aumento{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+        color: rgb(22, 194, 60);
+    }
+    100%{
+        transform: scale(1);
+        color: black;
+    }
+}
+.country_menu .country_option {
+    display: inline-block; 
+    position: relative; 
+    font-family: cursive;
+}
+
+.country_menu .country_option:hover {
+    animation: subirLetras 1s forwards; 
+}
+
+@keyframes subirLetras {
+    0% {
+        top: 0; 
+    }
+    50% {
+        top: -10px; 
+        color: white;
+    }
+    75%{
+        top: 20px;
+        color: azure;
+    }
+    100% {
+        top: 0; 
+    }
+}
+
+
+.item{
+text-decoration: none;
+color: black;
+}
+.country_menu{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    background-color: rgb(77, 84, 80);
+    margin: 0;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.main_menu a, .TituloPais, header h1{
+    padding: 20px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.TituloPais{
+    padding: 0;
+}
+.country_menu a{
+    padding: 20px;
+}
+.country_monuments{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.country_monuments div{
+    justify-content: center;
+    display: flex;
+    width: 250px;
+    height: 325px;
+    margin: 20px;
+    background-color: rgb(126, 124, 123);
+    border-radius: 25px;
+    animation: cambioSombra 3s infinite;
+    transition: transform 0.3s ease;
+}
+
+.country_monuments div:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 70px rgba(255, 255, 255, 0.7);
+}
+
+.country_monuments div h3,
+.country_monuments div h4 {
+    color: black; 
+    transition: transform 2s ease, color 2s ease;
+}
+
+.country_monuments div:hover h3,
+.country_monuments div:hover h4 {
+    transform: scale(1.2);
+    color: rgb(255, 245, 131); 
+}
+
+.country_section h2{
+    animation: cambioColor 3s infinite;
+}
+@keyframes cambioColor {
+    0% { color: rgba(255, 255, 255, 0.7); }
+    25% { color:  rgba(63, 233, 91, 0.7); }
+    75% { color: rgba(185, 255, 110, 0.733)}
+    100% { color: rgba(255, 255, 255, 0.7); }
+}
+
+
+@keyframes cambioSombra {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+    25% { box-shadow: 0 0 20px rgba(63, 233, 91, 0.7); }
+    75% { box-shadow: 0 0 20px rgba(37, 237, 220, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+}
+
+.country_monuments div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.country_option{
+    text-decoration: none;
+    font-size: 26px; 
+    color: #000000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.country_section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(100, 105, 102);
+    margin: 2px;
+    padding: 5px;
+    border: solid black 5px;
+}
